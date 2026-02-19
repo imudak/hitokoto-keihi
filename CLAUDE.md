@@ -1,5 +1,22 @@
 # CLAUDE.md - P-18 ひとこと経費記録PWA
 
+## MUSUBI SDD
+
+このプロジェクトは **MUSUBI**（Ultimate Specification Driven Development）を採用。
+
+- `/sdd-requirements <feature>` - EARS要件定義
+- `/sdd-design <feature>` - C4 + ADR 設計
+- `/sdd-tasks <feature>` - タスク分解
+- `/sdd-implement <feature>` - 実装実行
+- `/sdd-validate <feature>` - 憲法準拠検証
+
+**ステアリング文書**
+- `steering/product.ja.md` - プロダクトコンテキスト
+- `steering/tech.ja.md` - 技術スタック
+- `steering/structure.ja.md` - アーキテクチャ
+- `steering/project.yml` - プロジェクト設定
+- `steering/rules/constitution.md` - 9つの憲法条項
+
 ## プロジェクト情報
 
 - **百式page_id:** 3041aeb6-4b1d-81b7-b9dd-ec8719205aa1
@@ -135,3 +152,10 @@ hitokoto-keihi/
 ## 次のアクション
 - 動作レビュー → フィードバック
 
+
+## Git Push ルール
+
+作業完了時は必ず `jj git push` を実行すること。
+- MUSUBIの各ステップ完了時
+- 機能実装完了時
+- steering files 更新時

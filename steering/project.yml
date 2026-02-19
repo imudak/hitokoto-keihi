@@ -1,0 +1,62 @@
+# MUSUBI Project Configuration
+name: hitokoto-keihi
+description: 一言入力で経費を記録できる超シンプルPWA
+locale: ja
+version: "0.1.0"
+created: 2026-02-18
+updated: 2026-02-18
+
+# 事業コンテキスト
+organization: まるふく工房
+owner: imudak
+primary_agent: クロウ候
+百式_page_id: 3041aeb6-4b1d-81b7-b9dd-ec8719205aa1
+
+# Technology Stack
+tech_stack:
+  approach: single
+  languages:
+    - typescript
+  framework: react
+  framework_version: "18.2"
+  build_tool: vite
+  css: tailwind
+  storage: localstorage
+  runtime: browser
+
+# 主要機能
+features:
+  - name: 一言入力パーサー
+    status: 完了
+    description: テキストから金額・場所・メモを自動抽出
+  - name: カテゴリ自動推定
+    status: 完了
+    description: 食費/交通費/通信費等を自動分類
+  - name: 経費一覧表示
+    status: 完了
+    description: 日付降順・カテゴリフィルター
+  - name: 音声入力
+    status: 開発中
+    description: Web Speech API による音声認識
+  - name: 月次サマリー
+    status: 未着手
+    description: Chart.js 円グラフで可視化
+  - name: CSVエクスポート
+    status: 未着手
+    description: 会計ソフト取込用CSV出力
+  - name: PWA化
+    status: 未着手
+    description: Service Worker・オフライン対応
+
+# デプロイ
+deployment:
+  platform: cloudflare_pages
+  url: ""
+  build_command: npm run build
+  output_dir: dist
+
+# ルール
+rules:
+  - データはLocalStorageのみ（サーバー送信禁止）
+  - 全コード変更前にMUSUBIプロセスを回す
+  - 計画先行: 設計→承認→実装
